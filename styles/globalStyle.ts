@@ -1,6 +1,15 @@
 import {createGlobalStyle} from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+@font-face {
+	font-family: Mulish ;
+	src: url("/fonts/Mulish/Mulish-Regular.ttf");
+	src: url("/fonts/Mulish/Mulish-Medium.ttf");
+	src: url("/fonts/Mulish/Mulish-Black.ttf");
+	src: url("/fonts/Mulish/Mulish-Bold.ttf");
+	font-style: normal;
+  font-weight: 400;
+}
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -10,8 +19,9 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+  font-family: Mulish, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	color: #A1D6FA;
 }
 
 a {
@@ -22,6 +32,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
 `
 
 export default GlobalStyle
