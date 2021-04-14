@@ -11,10 +11,8 @@ const StyledContainer = styled(Container)<ICContainer>`
     ${(props) =>
       props.variant === 'mainContent' &&
       css`
-        padding-top: 43px;
+        margin-top: 43px;
       `}
-    padding-left: 16px;
-    min-height: 100vh;
 
     padding-left: 16px;
     padding-right: 16px;

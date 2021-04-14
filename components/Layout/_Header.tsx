@@ -6,11 +6,8 @@ import CContainer from 'components/CContainer'
 import GridDotButton from 'components/Layout/_GridDotButton'
 import MyAccount from 'components/Layout/_MyAccount'
 
-const StyledHeader = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+const StyledHeader = styled.header`
+  width: 100%;
   height: 80px;
   border-bottom: 1px solid #6389af;
 
