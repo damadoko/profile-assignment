@@ -7,6 +7,8 @@ import TabsWrapper from 'components/pages/Home/TabsWrapper'
 import AccountIcon from 'public/icons/AccountIcon'
 import BankIcon from 'public/icons/BankIcon'
 import EmailIcon from 'public/icons/EmailIcon'
+import UserAvatar from 'components/pages/Home/_UserAvatar'
+import CommunicationDetails from 'components/pages/Home/_CommunicationDetails'
 
 const StyledDiv = styled.div`
   background-color: #1f2744;
@@ -26,9 +28,13 @@ const Home: React.FC = () => {
       <TabsWrapper tabsData={tabsData}>
         <StyledDiv>
           <Grid container spacing={2}>
-            <Grid container item xs={6}>
-              <Grid item>HowDyCandidate</Grid>
-              <Grid item>Comunication details</Grid>
+            <Grid container item xs={6} spacing={3}>
+              <Grid item xs={12}>
+                <UserAvatar />
+              </Grid>
+              <Grid item xs={12}>
+                <CommunicationDetails />
+              </Grid>
             </Grid>
 
             <Grid item xs={6}>

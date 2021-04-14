@@ -33,6 +33,10 @@ a {
   box-sizing: border-box;
 }
 
+p {
+	margin-top:0;
+	margin-bottom: 9px;
+}
 `
 
 export default GlobalStyle

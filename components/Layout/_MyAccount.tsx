@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-import ExpandMoreIcon from 'public/icons/AccountIcon'
+import ExpandMoreIcon from 'public/icons/ExpandMoreIcon'
 
 const StyledDiv = styled.div`
   && {
@@ -18,7 +18,7 @@ const MyAccount: React.FC = () => {
   return (
     <StyledDiv>
       <div className="account__avatar">
-        <Image src="/images/avatar.png" alt="Avatar" width={45} height={45} />
+        <Image src="/images/avatarIcon.png" alt="Avatar" width={45} height={45} />
       </div>
 
       <div>Howdy...</div>
