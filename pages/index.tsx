@@ -1,14 +1,5 @@
-import Head from 'next/head'
+import HomeScreen from 'components/pages/Home'
 
-const Home = () => {
-  return (
-    <div>
-      <Head>
-        <title>Fetch Assignment</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-    </div>
-  )
-}
+const Home = () => <HomeScreen />
 
 export default Home
