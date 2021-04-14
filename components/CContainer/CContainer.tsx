@@ -1,13 +1,33 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import Container, {ContainerProps} from '@material-ui/core/Container'
 
-const StyledContainer = styled(Container)`
-  min-width: 1006px;
-  min-height: 100vh;
+interface ICContainer extends ContainerProps {
+  variant?: 'mainContent'
+}
+
+const StyledContainer = styled(Container)<ICContainer>`
+  && {
+    ${(props) =>
+      props.variant === 'mainContent' &&
+      css`
+        padding-top: 43px;
+      `}
+    padding-left: 16px;
+    min-height: 100vh;
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @media (min-width: 1280px) {
+      max-width: 1006px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 `
 
-const CContainer: React.FC<ContainerProps> = ({children, ...rest}) => {
+const CContainer: React.FC<ICContainer> = ({children, ...rest}) => {
   return (
     <StyledContainer disableGutters={true} {...rest}>
       {children}

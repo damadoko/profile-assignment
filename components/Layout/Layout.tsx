@@ -1,23 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import Header from 'components/Layout/Header'
+import Header from 'components/Layout/_Header'
 
-const StyledLayout = styled.div`
+const StyledDiv = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 80px;
 
-  background-color: #e5e5e5;
+  background-color: #1f2744;
 `
-
 const Layout: React.FC = ({children}) => {
   return (
-    <StyledLayout>
+    <StyledDiv>
       <Header />
 
       <main>{children}</main>
-    </StyledLayout>
+    </StyledDiv>
   )
 }
 

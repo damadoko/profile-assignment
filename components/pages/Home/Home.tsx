@@ -5,7 +5,7 @@ import CContainer from 'components/CContainer'
 
 const Home: React.FC = () => {
   return (
-    <CContainer>
+    <CContainer variant="mainContent">
       <Grid container>Test home</Grid>
     </CContainer>
   )
