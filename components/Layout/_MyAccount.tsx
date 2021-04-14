@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-import ExpandMoreIcon from 'components/Layout/ExpandMoreIcon'
+import ExpandMoreIcon from 'public/icons/AccountIcon'
 
 const StyledDiv = styled.div`
   && {
