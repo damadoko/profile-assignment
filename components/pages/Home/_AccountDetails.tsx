@@ -24,7 +24,7 @@ const StyledDiv = styled.div<ICustomDiv>`
         background-color: ${props.bgColor};
       `}
 
-    .account-infor__label {
+    .account-info__label {
       font-size: 18px;
     }
 

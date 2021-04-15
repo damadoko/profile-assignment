@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import TextField, {TextFieldProps} from '@material-ui/core/TextField'
+import TextField, {FilledTextFieldProps} from '@material-ui/core/TextField'
 import Box from '@material-ui/core/Box'
 
 const StyledTextField = styled(TextField)`
@@ -34,7 +34,11 @@ const StyledDiv = styled.div`
   }
 `
 
-const CInput: React.FC<TextFieldProps> = ({label, ...rest}) => {
+interface IProps extends Omit<FilledTextFieldProps, 'variant'> {
+  isVerifyInput?: boolean
+}
+
+const CInput: React.FC<IProps> = ({label, isVerifyInput, ...rest}) => {
   return (
     <StyledDiv>
       <Box component="label" color="rgba(159, 216, 255, 0.36)">
@@ -43,7 +47,7 @@ const CInput: React.FC<TextFieldProps> = ({label, ...rest}) => {
 
       <div className="input-wrapper">
         <StyledTextField {...rest} variant="filled" InputProps={{disableUnderline: true}} />
-        <div className="input-action">Verify</div>
+        {!!isVerifyInput && <div className="input-action">Verify</div>}
       </div>
     </StyledDiv>
   )

@@ -10,6 +10,7 @@ import EmailIcon from 'public/icons/EmailIcon'
 import UserAvatar from 'components/pages/Home/_UserAvatar'
 import CommunicationDetails from 'components/pages/Home/_CommunicationDetails'
 import AccountDetails from 'components/pages/Home/_AccountDetails'
+import HomeAddress from 'components/pages/Home/_HomeAddress'
 
 const StyledDiv = styled.div`
   background-color: #1f2744;
@@ -42,15 +43,18 @@ const Home: React.FC = () => {
               <AccountDetails />
             </Grid>
 
-            <Grid container item xs={12}>
-              Home Address
+            <HomeAddress />
+            {/* <Grid container item xs={12} spacing={2}>
               <Grid item xs={6}>
+                <Box component="p" fontWeight="600">
+                  Home Address
+                </Box>
                 address
               </Grid>
               <Grid item xs={6}>
                 Town City + Postal code
               </Grid>
-            </Grid>
+            </Grid> */}
           </Grid>
         </StyledDiv>
       </TabsWrapper>

@@ -23,7 +23,7 @@ const CommunicationDetail: React.FC = () => {
         Communication Details
       </Box>
       <Box mb="16px">
-        <CInput label="Mobile Number" value="*********98765" fullWidth />
+        <CInput label="Mobile Number" value="*********98765" isVerifyInput={true} fullWidth />
       </Box>
       <CDropdown label="Language" value={1} variant="outlined" fullWidth />
     </StyledDiv>
