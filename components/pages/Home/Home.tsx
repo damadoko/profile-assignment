@@ -9,6 +9,7 @@ import BankIcon from 'public/icons/BankIcon'
 import EmailIcon from 'public/icons/EmailIcon'
 import UserAvatar from 'components/pages/Home/_UserAvatar'
 import CommunicationDetails from 'components/pages/Home/_CommunicationDetails'
+import AccountDetails from 'components/pages/Home/_AccountDetails'
 
 const StyledDiv = styled.div`
   background-color: #1f2744;
@@ -38,7 +39,7 @@ const Home: React.FC = () => {
             </Grid>
 
             <Grid item xs={6}>
-              account details
+              <AccountDetails />
             </Grid>
 
             <Grid container item xs={12}>
