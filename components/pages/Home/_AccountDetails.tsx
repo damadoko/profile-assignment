@@ -110,6 +110,7 @@ const AccountDetails: React.FC = () => {
       </Box>
       {accountDetails.map(({label, value, icon}, index) => (
         <AccountInfo
+          key={index}
           label={label}
           value={value}
           icon={icon}
