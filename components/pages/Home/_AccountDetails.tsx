@@ -25,30 +25,30 @@ const StyledDiv = styled.div<ICustomDiv>`
       `}
 
     .account-info__label {
+      min-width: 160px;
       font-size: 18px;
+      display: flex;
+      justify-content: space-between;
     }
-
-    .account-info__value {
-      > span {
-        margin-right: 30px;
-      }
+    .link {
+      text-decoration: underline;
     }
   }
 `
 interface IAccountInfo extends Partial<ICustomDiv> {
   label: string
-  value: string
+  value: string | ReactElement
   icon?: ReactElement | null
 }
 
 export const AccountInfo: React.FC<IAccountInfo> = ({label, value, icon, bgColor = ''}) => {
   return (
     <StyledDiv bgColor={bgColor}>
-      <div className="account-info__label">{label}</div>
-      <div className="account-info__value">
+      <div className="account-info__label">
+        <span>{label}</span>
         <span>:</span>
-        {value}
       </div>
+      <div className="account-info__value">{value}</div>
       <div className="account-info__icon">{icon ?? ''}</div>
     </StyledDiv>
   )
@@ -112,7 +112,7 @@ const AccountDetails: React.FC = () => {
         <AccountInfo
           key={index}
           label={label}
-          value={value}
+          value={value === 'Change Password' ? <div className="link">{value}</div> : value}
           icon={icon}
           bgColor={index % 2 ? '' : 'rgba(159, 216, 255, 0.24)'}
         />

@@ -58,7 +58,7 @@ const Home: React.FC = () => {
               </Box>
 
               <FormGroup>
-                <Box textAlign="center">
+                <Box textAlign="center" fontWeight={400}>
                   <FormControlLabel
                     control={
                       <Checkbox
