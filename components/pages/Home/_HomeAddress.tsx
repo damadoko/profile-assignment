@@ -28,13 +28,13 @@ export const HomeAddress: React.FC = () => {
   return (
     <StyledContainer>
       <Grid container item xs={12} spacing={2}>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Box component="p" fontWeight="600">
             Home Address
           </Box>
           <CInput label="Address" value="Address" multiline rows={2} rowsMax={4} fullWidth />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Box mb="16px">
             <CInput label="Town/City" value="Town/City" fullWidth />
           </Box>

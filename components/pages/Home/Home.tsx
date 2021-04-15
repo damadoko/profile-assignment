@@ -37,7 +37,7 @@ const Home: React.FC = () => {
       <TabsWrapper tabsData={tabsData}>
         <StyledDiv>
           <Grid container spacing={2}>
-            <Grid container item xs={6} spacing={3}>
+            <Grid container item xs={12} md={6} spacing={3}>
               <Grid item xs={12}>
                 <UserAvatar />
               </Grid>
@@ -46,7 +46,7 @@ const Home: React.FC = () => {
               </Grid>
             </Grid>
 
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <AccountDetails />
             </Grid>
 
